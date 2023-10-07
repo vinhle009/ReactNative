@@ -94,14 +94,14 @@ const styles = StyleSheet.create({
   input: {
     backgroundColor: "#d0e4d4",
     width: 350,
-    height: 50,
+    height: 45,
     borderRadius: 1,
     marginTop: 25,
   },
   inputPassword: {
     backgroundColor: "#d0e4d4",
     width: 310,
-    height: 50,
+    height: 40,
     borderRadius: 1,
     marginTop: 25,
   },
