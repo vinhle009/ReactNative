@@ -1,11 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native'
-import Product from './src/Product';
-import ColorSelection from './src/ColorSelection';
-
+import { MainStackNavigator } from "./src/Stack";
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 export default function App() {
   return (
- <ColorSelection/>
-   
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
   );
 }

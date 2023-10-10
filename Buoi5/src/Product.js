@@ -10,9 +10,12 @@ import {
   TextInput,
   Dimensions,
 } from "react-native";
+import React from "react";
+import {ColorSelection} from "./ColorSelection";
 
-export default function Product() {
+const Product =({ navigation })=> {
   return (
+    
     <View style={styles.container}>
       <View style={styles.product}>
         <View style={styles.productImage}>
@@ -57,14 +60,17 @@ export default function Product() {
       <View style={styles.Refund}>
         <Text style={styles.textRefund}>Ở ĐÂU RẺ HƠN HOÀN TIỀN</Text>
         <TouchableOpacity>
-        <Image
-          style={styles.imgQuestion}
-          source={require("../assets/question.png")}
-        />
+          <Image
+            style={styles.imgQuestion}
+            source={require("../assets/question.png")}
+          />
         </TouchableOpacity>
       </View>
       <View style={styles.color}>
-        <TouchableOpacity style={styles.btnColor}>
+        <TouchableOpacity
+          style={styles.btnColor}
+          onPress={() => navigation.navigate('Color')}
+        >
           <Text style={styles.textColor}>4 MÀU-CHỌN MÀU</Text>
           <Image
             style={styles.imgarrow}
@@ -74,7 +80,7 @@ export default function Product() {
       </View>
       <View style={styles.Buy}>
         <TouchableOpacity style={styles.btnBuy}>
-            <Text style={styles.textBuy}>CHỌN MUA</Text>
+          <Text style={styles.textBuy}>CHỌN MUA</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -133,15 +139,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
   },
-  btnColor: { 
-    flexDirection: "row" ,
+  btnColor: {
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
     width: 350,
     height: 40,
     borderRadius: 10,
-    },
+  },
   imgarrow: {
     width: 12,
     height: 14,
@@ -158,20 +164,20 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
   },
-    btnBuy: {
-  backgroundColor: "red",
-  width: 350,
-  height: 44,
-  borderRadius:10,
-  alignItems: "center",
+  btnBuy: {
+    backgroundColor: "red",
+    width: 350,
+    height: 44,
+    borderRadius: 10,
+    alignItems: "center",
     justifyContent: "center",
-    },
-    textBuy: {
-        fontSize:20,
-        fontWeight: "500",
-        fontStyle: "Arial",
-        color: "white",
-    },
+  },
+  textBuy: {
+    fontSize: 20,
+    fontWeight: "500",
+    fontStyle: "Arial",
+    color: "white",
+  },
   image: {
     width: 300,
     height: 360,
@@ -206,3 +212,4 @@ const styles = StyleSheet.create({
     marginLeft: 30,
   },
 });
+export default Product;
