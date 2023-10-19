@@ -13,15 +13,16 @@ import {
 import React from "react";
 import {ColorSelection} from "./ColorSelection";
 
-const Product =({ navigation })=> {
+const Product =({ navigation,route })=> {
+  const image  = route.params?.image;
+  React.useEffect(() => {},);
   return (
-    
     <View style={styles.container}>
       <View style={styles.product}>
         <View style={styles.productImage}>
           <Image
             style={styles.image}
-            source={require("../assets/vs_blue.png")}
+            source={image ? image : require("../assets/vs_blue.png")}
           />
         </View>
         <View style={styles.productInfo}>

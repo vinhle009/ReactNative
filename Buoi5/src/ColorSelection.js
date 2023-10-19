@@ -10,7 +10,7 @@ import {
   Dimensions,
 } from "react-native";
 import { useState } from "react";
-export default function ColorSelection() {
+export default function ColorSelection({ navigation }) {
   const silver = require("../assets/vs_silver.png");
   const red = require("../assets/vs_red.png");
   const black = require("../assets/vs_black.png");
@@ -48,8 +48,13 @@ export default function ColorSelection() {
           ></Pressable>
         </View>
       </View>
+
       <View style={styles.done}>
-        <TouchableOpacity style={styles.btnDone}>
+        
+        <TouchableOpacity
+          style={styles.btnDone}
+          onPress={() => navigation.navigate("Product", { image: colors },)}
+        >
           <Text style={styles.txtDone}>Xong</Text>
         </TouchableOpacity>
       </View>
@@ -68,6 +73,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   image: {
+    resizeMode: "contain",
     width: 112,
     height: 135,
   },
@@ -122,7 +128,7 @@ const styles = StyleSheet.create({
   silver: {
     width: 85,
     height: 80,
-    backgroundColor: "#C5F1FB",
+    backgroundColor: "#c7e3e2",
   },
   red: {
     width: 85,
