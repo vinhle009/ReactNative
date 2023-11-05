@@ -1,0 +1,2 @@
+dùng mockapi tạo dữ liệu
+fetchapi lấy data về : json placeholder
