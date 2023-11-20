@@ -11,19 +11,19 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     // man hinh Job
-    /*<NavigationContainer>
+    <NavigationContainer>
       <StackNavigation />
     </NavigationContainer>
-    */
+
     // man hinh cafe
-    <NavigationContainer>
+    /*<NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
         <Stack.Screen name="ShopNear" component={ShopNear} options={{headerShown: false}} />
         <Stack.Screen name="Drinks" component={Drinks} options={{headerShown: false}}/>
         <Stack.Screen name="Orders" component={Orders} options={{headerShown: true}}/>
       </Stack.Navigator>
-    </NavigationContainer>
+    </NavigationContainer>*/
   );
 }
 

@@ -12,7 +12,7 @@ import {
   import React from "react";
   import { useState, useEffect } from "react";
 import ListJob from "./ListJob";
-export default function AddJob({ navigation }) {
+export default function AddJob({ navigation ,route}) {
     const[job, setJob] = useState("");
     const save=()=>{
         fetch("https://654272dcad8044116ed3645a.mockapi.io/users", {

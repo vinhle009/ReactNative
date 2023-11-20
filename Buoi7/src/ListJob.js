@@ -17,6 +17,7 @@ export default function ListJob({ navigation, route }) {
   const [id, setId] = useState(0);
   const [workTitle, setWorkTitle] = useState("");
   const [visible, setVisible] = useState(false);
+  // const name = route.params.username;
   useEffect(() => {
     getItems();
     navigation.addListener("focus", () => {
@@ -65,7 +66,6 @@ export default function ListJob({ navigation, route }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-          // "id": item.id,
         "workTitle": workTitle,
       }),
     })
@@ -166,7 +166,7 @@ export default function ListJob({ navigation, route }) {
         <TouchableOpacity
           style={styles.btnAdd}
           onPress={() => {
-            navigation.navigate("AddJob");
+            navigation.navigate("AddJob", {name: name});
           }}
         >
           <Image style={styles.add} source={require("../assets/add.png")} />

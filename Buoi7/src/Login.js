@@ -31,9 +31,10 @@ export default function Login({navigation}){
                     }/>
                 </View>
                 <View style={styles.btn}>
-                    <TouchableOpacity style={styles.btnLogin} onPress={() => 
-                     navigation.navigate("ListJob",{paramKey : name})
-                    }>
+                    <TouchableOpacity style={styles.btnLogin} onPress={() => {
+                     navigation.navigate("ListJob",{username : name
+                    })
+                    }}>
                         <Text style={styles.txtLogin}>GET STARTED</Text>
                     </TouchableOpacity>
                 </View>
